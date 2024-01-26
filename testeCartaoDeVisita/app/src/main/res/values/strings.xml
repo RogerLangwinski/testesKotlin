@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CartaoDeVisita</string>
+    <string name="name">Roger Langwinski</string>
+    <string name="cargo">Android Developer Extraordinaire</string>
+    <string name="telefone">+55 (54) 9 8121 8315</string>
+    <string name="arroba">\@RogerDev</string>
+    <string name="email">langwinskiroger@gmail.com</string>
+</resources>
