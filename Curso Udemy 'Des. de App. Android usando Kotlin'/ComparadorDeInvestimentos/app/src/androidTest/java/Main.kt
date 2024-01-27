@@ -10,35 +10,27 @@ com saldo 0 e que investirão 5% do salário.
 Em quantos meses o patrimônio de Paula vai superar o patrimônio de Ana?
 */
 
-
-
-
 fun exercicio(){
-    var porcaoInvestidaFuncionario : Float = 0.05f
+    val porcaoInvestidaFuncionario : Float = 0.05f
     val porcaoInvestidaEmpresa : Float = porcaoInvestidaFuncionario * 2
-    val porcaoRendimentoParalelo : Float = 0.08f
-
-    val rendimentoEmpresa : Float = 0.2f
-    val rendimentoParalelo : Float = 0.8f
-
+    val rendimentoEmpresa : Float = 1.002f
+    val rendimentoParalelo : Float = 1.008f
     val salario : Float = 10000f
-
     var patrimonioAna : Float = 0f
     var patrimonioPaula : Float = 0f
+    var quantidadeDeMeses : Int = 0
 
-    var quantidadeDeMeses : Byte = 0
-
-    //while (patrimonioPaula <= patrimonioAna){
-        patrimonioAna += (salario * porcaoInvestidaEmpresa)
-        patrimonioPaula += (salario * porcaoRendimentoParalelo)
+    while(patrimonioPaula <= patrimonioAna){
+        println("Quantidade de meses passados: $quantidadeDeMeses")
+        patrimonioAna *= rendimentoEmpresa
+        patrimonioAna += salario * porcaoInvestidaEmpresa
+        patrimonioPaula *= rendimentoParalelo
+        patrimonioPaula += salario * porcaoInvestidaFuncionario
+        println("Patrimônio Ana: R$ $patrimonioAna")
+        println("Patrimônio Paula: R$ $patrimonioPaula")
         quantidadeDeMeses++
-        println(quantidadeDeMeses)
-    //}
-    println("Patrimônio Ana: R$ $patrimonioAna")
-    println("Patrimônio Paula: R$ $patrimonioPaula")
-    println("Quantidade de meses passados: $quantidadeDeMeses")
+    }
 }
-
 
 fun main(){
     exercicio()
