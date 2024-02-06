@@ -1,8 +1,8 @@
-class NovaOperacao() {
+class NovaOperacao {
 
     private var operacaoSolicitada: Int = 0
-    private var num1: Int = 0
-    private var num2: Int = 0
+    private var num1: Float = 0f
+    private var num2: Float = 0f
     private var repetir: Int = 0
 
     fun inicializacao() {
@@ -18,10 +18,10 @@ class NovaOperacao() {
                     else -> println("Operação selecionada: $operacaoSolicitada - Divisão")
                 }
 
-                println("\nDigite o primeiro dígito: ")
-                num1 = readln().toInt()
-                println("\nDigite o segundo dígito: ")
-                num2 = readln().toInt()
+                println("\nDigite o primeiro número: ")
+                num1 = readln().toFloat()
+                println("\nDigite o segundo número: ")
+                num2 = readln().toFloat()
 
                 print("Resultado: ")
 
@@ -42,10 +42,7 @@ class NovaOperacao() {
     }
 }
 
-
 fun main() {
-    val novaOperacao: NovaOperacao = NovaOperacao()
+    val novaOperacao = NovaOperacao()
     novaOperacao.inicializacao()
-
-    //val calculos : Calculos = Calculos()
 }
